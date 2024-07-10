@@ -1,7 +1,7 @@
 {
   "name": "express-socketio-typescript",
   "version": "0.0.1",
-  "description": "This is a simple messaging server developed with NodeJS and SocketIO.",
+  "description": "This is a simple messaging server developed with NodeJS and Socket.io.",
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/index.js",
