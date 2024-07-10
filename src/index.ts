@@ -4,7 +4,6 @@ import { Server } from 'socket.io';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import mime from 'mime';
 dotenv.config();
 
 const app = express();
