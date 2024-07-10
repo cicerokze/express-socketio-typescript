@@ -1,0 +1,23 @@
+{
+    "name": "en-US",
+    "reference": "ISO 639",
+    "summary": "Portuguese (Brazil) localization",
+    "version": "1.0",
+    "category": "Localization",
+    "author": "Kze Labs",
+    "website": "https://www.kzelabs.io",
+    "depends": [
+        "base"
+    ],
+    "data": [
+        {
+            "bem-vindo": "Welcome!"
+        }
+    ],
+    "demo": [],
+    "test": [],
+    "installable": true,
+    "auto_install": false,
+    "application": false,
+    "license": "Apache-2.0"
+}
