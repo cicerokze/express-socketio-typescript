@@ -1,6 +1,6 @@
 # express-socketio-typescript
 
-Websocket messaging Server with a simple Chat develped with:
+Websocket messaging Server with a simple Chat developed with:
 - NodeJS
 - ExpressJS
 - Socket.io
