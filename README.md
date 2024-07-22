@@ -41,4 +41,4 @@ When you try this address, you will probably see a warning saying: Not a secure 
 ![screenshot](example.png)
 [chat-app-example](https://cicerokze-82mb3.ondigitalocean.app/)
 
-This example is public. It means everyone connected at the same time, will see and send messages from/for everyone. 
+This example is public. It means everyone connected will see and send messages from/for everyone. 
