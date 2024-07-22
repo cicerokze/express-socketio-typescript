@@ -1,10 +1,9 @@
 {
   "name": "express-socketio-typescript",
   "version": "0.0.1",
-  "description": "This is a simple messaging server developed with NodeJS and Socket.io.",
+  "description": "Chat server developed with Node and Socket.io.",
   "scripts": {
-    "build": "tsc",
-    "start": "node ./dist/index.js",
+    "start": "ts-node ./src/index.ts",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
