@@ -36,3 +36,7 @@ $ npm run dev
 6. Take the same test by typing your names or type whatever you want.
 
 When you try this address, you will probably see a warning saying: Not a secure address. This happens because the server is local (http). Do not worry about that. Access to your Chat is only permitted to those who have access to the network.
+
+## Example:
+![screenshot](example.png)
+[chat-app](https://cicerokze-82mb3.ondigitalocean.app/)
