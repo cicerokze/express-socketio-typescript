@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Chat server developed with Node and Socket.io.",
   "scripts": {
-    "build": "tsc",
     "start": "ts-node ./src/index.ts",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
