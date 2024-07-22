@@ -37,8 +37,8 @@ $ npm run dev
 
 When you try this address, you will probably see a warning saying: Not a secure address. This happens because the server is local (http). Do not worry about that. Access to your Chat is only permitted to those who have access to the network.
 
-## Example:
-[chat-app-example](https://cicerokze-82mb3.ondigitalocean.app/)
+## Example: [chat-app-example](https://cicerokze-82mb3.ondigitalocean.app/)
+
 ![](./assets/example.png)
 
 This example is public. It means everyone connected will see and send messages from/for everyone. 
