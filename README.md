@@ -39,4 +39,6 @@ When you try this address, you will probably see a warning saying: Not a secure 
 
 ## Example:
 ![screenshot](example.png)
-[chat-app](https://cicerokze-82mb3.ondigitalocean.app/)
+[chat-app-example](https://cicerokze-82mb3.ondigitalocean.app/)
+
+This example is public. It means everyone connected at the same time, will see and send messages from/for everyone. 
