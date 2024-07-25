@@ -6,6 +6,10 @@ Websocket messaging Server with a simple Chat developed with:
 - Socket.io
 - Typescript
 
+<a href="https://www.buymeacoffee.com/cicerokze" target="_blank">
+	<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150" />
+</a>
+
 ## Description
 
 This is a simple Websocket messaging server with a Chat. This App was developed with NodeJS, ExpressJS and Socket.io based on Typescript language.
