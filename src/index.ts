@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
     });
 
     // Receives messages from client
-    // in the channel 'chat message' and
+    // in the Event 'chat message' and
     // send it back to all users
     socket.on('chat message', (msg) => {
         console.log(msg.replace(/<b>|<\/b>/g, ''));
