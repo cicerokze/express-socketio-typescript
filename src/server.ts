@@ -1,23 +1,19 @@
 import path from 'node:path';
 import { createServer } from 'node:http';
 import { Server } from 'socket.io';
-import express, { Request, Response } from 'express';
+import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
-dotenv.config();
 
+const dotenv = require('dotenv').config();
+const port = process.env.PORT || 8080;
 const app = express();
-app.use(cors());
-app.use(express.static('./src'));
-
 const server = createServer(app);
 const io = new Server(server);
-const port = process.env.PORT || 3000;
 
-app.get('/', (req: Request, res: Response) => {
-    console.log('__dirname: ', __dirname);
-    res.render(path.join(__dirname));
-});
+app.use(cors());
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 io.on('connection', (socket) => {
 
