@@ -12,7 +12,7 @@ app.use(express.static('./src'));
 
 const server = createServer(app);
 const io = new Server(server);
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req: Request, res: Response) => {
     console.log('__dirname: ', __dirname);
