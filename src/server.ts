@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { createServer } from 'node:http';
 import { Server } from 'socket.io';
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 
 const dotenv = require('dotenv').config();
@@ -14,6 +14,10 @@ app.use(cors());
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.get('/', (req: Request, res: Response) => {
+    res.render('index');
+});
 
 io.on('connection', (socket) => {
 
