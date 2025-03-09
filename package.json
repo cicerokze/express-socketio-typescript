@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Chat server developed with Node and Socket.io.",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
-    "dev": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx ./src/index.ts",
+    "dev": "tsx watch --include ./src/* ./src/index.ts",
+    "test": "mocha ./src/test/*"
   },
   "author": "Cícero Kzé",
   "license": "ISC",
@@ -13,9 +13,6 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.10",
     "dotenv": "^16.4.5",
-    "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
     "tsc": "^2.0.4",
     "typescript": "^5.5.3"
   },
@@ -23,6 +20,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5",
+    "tsx": "^4.19.3"
   }
 }
