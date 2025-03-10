@@ -42,6 +42,6 @@ $ npm run dev
 
 When you try this address, you will probably see a warning saying: Not a secure address. This happens because the server is local. Do not worry about that. Access to your Chat is only permitted to those who have access to your network.
 
-## Example: [express-socketio](https://express-socketio-125e30aa1e18.herokuapp.com/)
+## Example: [express-socketio-typescript](https://express-socketio-125e30aa1e18.herokuapp.com/)
 
 ![](./assets/example.png)
