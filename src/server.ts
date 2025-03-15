@@ -29,7 +29,6 @@ wsServer.on('connection', (socket) => {
      * log on a broadcast when any client is connected
      */
     wsServer.emit('global-chat', `${socket.id} connected`); 
-    console.log(socket.id, ' connected');
 
     /**
      * Receives messages from client
@@ -37,7 +36,6 @@ wsServer.on('connection', (socket) => {
      * send it back to all users
      */
     socket.on('global-chat', (msg) => {
-        console.log(msg.replace(/<b>|<\/b>/g, ''));
         wsServer.emit('global-chat', msg);
     });
 
@@ -47,8 +45,7 @@ wsServer.on('connection', (socket) => {
      * and its status 'disconnected'
      */
     socket.on('disconnect', () => {
-        wsServer.emit('global-chat', `${socket.id} disconnected`)
-        console.log(socket.id, ' disconnected');
+        wsServer.emit('global-chat', `${socket.id} disconnected`);
     });
 });
 

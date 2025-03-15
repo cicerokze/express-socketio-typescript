@@ -16,7 +16,6 @@ socket.on('connect', () => {
  * all messages in the screen of any client to all clients
  */
 socket.on('global-chat', (msg) => {
-    console.log('global-chat, msg: ', msg.replace(/<b>|<\/b>/g, ''));
     const li = document.createElement('li');
     li.innerHTML = msg;
     messages.appendChild(li);
