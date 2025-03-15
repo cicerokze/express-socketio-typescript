@@ -6,8 +6,8 @@ import cors from 'cors';
 
 const port = process.env.PORT || 8080;
 const app = express();
-const server = createServer(app);
-const io = new Server(server);
+const httpServer = createServer(app);
+const wsServer = new Server(httpServer);
 
 app.use(cors());
 app.use(express.static('public'));
@@ -18,31 +18,37 @@ app.get('/', (req: Request, res: Response) => {
     res.render('index');
 });
 
-io.on('connection', (socket) => {
+/**
+ * Listen on event 'connection' when any client logs in.
+ * Get access to socket to manage its properties
+ */
+wsServer.on('connection', (socket) => {
 
-    // Logs in the server when user is connected or disconnected
-    console.log(socket.id, ' connected');
+    /**
+     * Create an event with name 'global-chat' to
+     * log on a broadcast when any client is connected
+     */
+    wsServer.emit('global-chat', `${socket.id} connected`); 
+
+    /**
+     * Receives messages from client
+     * on the event 'global-chat' and
+     * send it back to all users
+     */
+    socket.on('global-chat', (msg) => {
+        wsServer.emit('global-chat', msg);
+    });
+
+    /**
+     * Listen on event 'disconnect' when any client logs out.
+     * Forward it to event 'global-chat' adding info 'socket.id'
+     * and its status 'disconnected'
+     */
     socket.on('disconnect', () => {
-        console.log(socket.id, ' disconnected');
+        wsServer.emit('global-chat', `${socket.id} disconnected`);
     });
-
-    // Receives messages from client
-    // in the Event 'chat message' and
-    // send it back to all users
-    socket.on('chat message', (msg) => {
-        console.log(msg.replace(/<b>|<\/b>/g, ''));
-        io.emit('chat message', msg);
-    });
-
-
-    // Server receives the message 'world' from client
-    // and send it back to all clients
-    socket.on('hello', (arg) => {
-        socket.emit('hello', arg);
-    });
-
 });
 
-server.listen(port, () => {
+httpServer.listen(port, () => {
     console.log(`[server]: Server running at http://localhost:${port}`);
 });
